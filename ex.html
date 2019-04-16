@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Temperature = function (cDegree) {
+        this.cDegree = cDegree;
+        this.convertToF = function () {
+            this.fDegree = (this.cDegree * 1.8) + 32;
+        }
+        this.convertToK = function () {
+            this.kDegree = this.cDegree + 273.15;
+        }
+        this.getFDegree = function () {
+            return this.fDegree;
+        }
+        this.getKDegree = function () {
+            return this.kDegree;
+        }
+        this.printResult = function () {
+            document.write("Do f la : " + this.fDegree + " - Do K la : " + this.kDegree);
+        }
+    }
+    let temp = new Temperature(35);
+    temp.convertToF();
+    temp.convertToK();
+    
+</script>
+</body>
+</html>
